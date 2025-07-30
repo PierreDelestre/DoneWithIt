@@ -1,13 +1,19 @@
 import { View } from 'react-native';
-import WelcomeScreen from './app/screens/WelcomeScreen';
-import ViewImageScreen from './app/screens/ViewImageScreen';
+import AppButton from './app/components/AppButton';
 
 export default function App() {
   console.log("App executed!");
 
   return (
-    //<WelcomeScreen />
-    <ViewImageScreen />
+    <View 
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+    >
+      <AppButton title='login' onPress={() => console.log('Tapped!')}/>
+    </View>
   );
 }
 
